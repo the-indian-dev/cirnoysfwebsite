@@ -3,20 +3,20 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>CirnoYSF : The ice-cold blazing-fast modern fork of YSFlight</title>
+        <title>YSFlight Reforged — The Definitive Modern YSFlight</title>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css" />
         <link
             rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
         />
-        <meta name="title" content="CirnoYSF — The ice-cold blazing-fast modern fork of YSFlight" />
+        <meta name="title" content="YSFlight Reforged — A Modern, Fast, and Free Flight Simulator" />
         <meta
             name="description"
-            content="CirnoYSF is a blazing-fast, BSD-licensed fork of the classic YSFlight simulator. Featuring high refresh rate, rain, sunsets, auto addon installer, and more."
+            content="YSFlight Reforged (originally known as cirnoYSF) is the definitive way to play YSFlight in 2024. A free, modern fork with high FPS, stunning visuals, an easy addon installer, and an active community. Download for Windows and Linux."
         />
         <meta
             name="keywords"
-            content="CirnoYSF, YSFlight, flight simulator, open source, Linux flight sim, BSD license, aircraft game, flight sim 2025"
+            content="YSFlight Reforged, YSFlight, free flight simulator, flight simulator for PC, open source flight sim, lightweight flight sim, flight game, YSFlight download, CirnoYSF, cirno ysflight, cirno ysf, linux flight sim, arcade flight simulator"
         />
         <meta name="robots" content="index, follow" />
         <script type="text/javascript">
@@ -34,175 +34,226 @@
             })(window, document, "clarity", "script", "rvc6smze3a");
         </script>
         <style>
-            body {
-                background-color: #f4fefe;
+            /* --- YSFlight Reforged Theme --- */
+            :root {
+                --reforged-orange: #f39c12;
+                --reforged-charcoal: #343a40;
+                --reforged-light-gray: #f8f9fa;
+                --reforged-dark-overlay: rgba(30, 30, 30, 0.75);
             }
-            .hero {
-                background: linear-gradient(to right, #b3e5fc, #81d4fa);
+
+            html {
+                scroll-behavior: smooth;
+            }
+            body {
+                background-color: #ffffff;
+            }
+            .hero.is-primary {
+                background-color: var(--reforged-charcoal);
+                background-image: url('asset/ss2.webp'); /* Use a dynamic screenshot */
+                background-size: cover;
+                background-position: center 30%;
+                position: relative;
+            }
+            .hero.is-primary::before {
+                content: '';
+                position: absolute;
+                top: 0; right: 0; bottom: 0; left: 0;
+                background-color: var(--reforged-dark-overlay);
+            }
+            .hero-body {
+                position: relative;
+                z-index: 1;
+            }
+            .button.is-primary {
+                background-color: var(--reforged-orange);
+                border-color: transparent;
+                font-weight: bold;
+            }
+            .button.is-primary:hover {
+                background-color: #e68e00;
             }
             .download-buttons .button {
-                margin-right: 1rem;
+                margin: 0.5rem;
             }
             .icon-box {
-                font-size: 2rem;
-                color: #00bcd4;
+                font-size: 3rem;
+                color: var(--reforged-orange);
+                margin-bottom: 1rem;
             }
             .screenshot-img {
-                border: 1px solid #ddd; /* Optional: adds a light border to screenshots */
-                border-radius: 4px; /* Optional: rounds the corners */
+                border: 2px solid #e0e0e0;
+                border-radius: 8px;
+                box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+                transition: transform 0.2s ease-in-out;
+            }
+            .screenshot-img:hover {
+                transform: scale(1.03);
+            }
+            .has-background-light {
+                background-color: var(--reforged-light-gray) !important;
             }
         </style>
     </head>
 
     <body>
-        <section class="hero is-info is-bold">
+                <!-- HERO SECTION -->
+        <section class="hero is-primary is-fullheight-with-navbar">
             <div class="hero-body">
                 <div class="container has-text-centered">
-                    <h1 class="title is-1">❄️ CirnoYSF</h1>
-                    <h2 class="subtitle is-4">The ice-cold blazing-fast modern fork of YSFlight</h2>
-                    <p class="is-size-6 has-text-white">Licensed under BSD Clause 3</p>
-                    <div class="buttons is-centered mt-4 download-buttons">
+                    <h1 class="title is-1 has-text-white">⚙️ YSFlight Reforged</h1>
+                    <h2 class="subtitle is-3 has-text-white">
+                        The legendary sandbox flight sim, rebuilt for today.
+                    </h2>
+                    <div class="is-size-5 has-text-white" style="max-width: 800px; margin: 0 auto 2rem auto;">
+                        <p class="mb-3">
+                            Engage in intense dogfights, fly aerobatic formations with friends online, or explore a massive world with thousands of community-made aircraft. YSFlight is a simulator that puts you in control.
+                        </p>
+                        <p>
+                            <strong>Reforged</strong> takes that limitless freedom and enhances it with modern performance, stunning visuals, and the quality-of-life features you expect.
+                        </p>
+                    </div>
+
+                    <div class="buttons is-centered download-buttons">
                         <a
-                            class="button is-link is-light is-medium"
+                            class="button is-primary is-large"
                             href="https://github.com/the-indian-dev/cirnoYSF/releases/latest/download/Main-Build-windows-latest-cl-Release.zip"
                         >
-                            <span class="icon">
-                                <i class="fab fa-windows"></i>
-                            </span>
+                            <span class="icon"><i class="fab fa-windows"></i></span>
                             <span>Download for Windows</span>
                         </a>
                         <a
-                            class="button is-link is-light is-medium"
+                            class="button is-light is-large"
                             href="https://github.com/the-indian-dev/cirnoYSF/releases/latest/download/Main-Build-ubuntu-22.04-gcc-Release.zip"
                         >
-                            <span class="icon">
-                                <i class="fab fa-linux"></i>
-                            </span>
+                            <span class="icon"><i class="fab fa-linux"></i></span>
                             <span>Download for Linux</span>
                         </a>
                     </div>
+                     <a href="#what-is-this" class="is-size-6 has-text-white mt-4">
+                        What is this? Start here! <i class="fas fa-arrow-down"></i>
+                     </a>
                 </div>
             </div>
         </section>
 
-        <section class="section">
+        <!-- WHAT IS THIS? SECTION (with CirnoYSF mention) -->
+        <section id="what-is-this" class="section">
             <div class="container">
-                <h2 class="title is-3 has-text-centered">✨ Features</h2>
-                <div class="columns is-multiline">
-                    <div class="column is-one-third has-text-centered">
-                        <span class="icon-box">
-                            <i class="fas fa-bolt"></i>
-                        </span>
-                        <h3 class="title is-5">High Refresh Rate</h3>
-                        <p>Experience ultra-smooth flight simulation with High FPS</p>
-                    </div>
-                    <div class="column is-one-third has-text-centered">
-                        <span class="icon-box">
-                            <i class="fas fa-cloud-showers-heavy"></i>
-                        </span>
-                        <h3 class="title is-5">Rain Effects</h3>
-                        <p>Dynamic weather conditions including immersive rainfall visuals.</p>
-                    </div>
-                    <div class="column is-one-third has-text-centered">
-                        <span class="icon-box">
-                            <i class="fas fa-sun"></i>
-                        </span>
-                        <h3 class="title is-5">Sunset Scenes</h3>
-                        <p>Fly through breathtaking sunsets with improved lighting effects.</p>
-                    </div>
-                    <div class="column is-one-third has-text-centered">
-                        <span class="icon-box">
-                            <i class="fas fa-magic"></i>
-                        </span>
-                        <h3 class="title is-5">QoL Improvements</h3>
-                        <p>Auto Add-on installer, better defaults — just works!</p>
-                    </div>
-                    <div class="column is-one-third has-text-centered">
-                        <span class="icon-box">
-                            <i class="fas fa-code-branch"></i>
-                        </span>
-                        <h3 class="title is-5">Actively Maintained</h3>
-                        <p>We love YSFlight too. Regular updates and community fixes.</p>
-                    </div>
-                    <div class="column is-one-third has-text-centered">
-                        <span class="icon-box">
-                            <i class="fas fa-code"></i>
-                        </span>
-                        <h3 class="title is-5">Open Source</h3>
-                        <p>Fork of Soji's original simulator — transparent and community-driven.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Screenshot Section Start -->
-        <section class="section">
-            <div class="container">
-                <h2 class="title is-3 has-text-centered">📸 Screenshots</h2>
-                <div class="columns is-multiline is-centered">
-                    <div class="column is-one-third">
-                        <figure class="image is-16by9">
-                            <img
-                                class="screenshot-img"
-                                src="asset/ss3.webp"
-                                alt="Luftansa Boeing 747 in sunset while its raining"
-                            />
-                        </figure>
-                        <p class="has-text-centered mt-2 is-size-7">
-                            <em>Beautiful Sunsets</em>
+                <div class="columns is-vcentered">
+                    <div class="column is-6">
+                        <h2 class="title is-2">The Best Way to Play YSFlight.</h2>
+                        <p class="is-size-5 mb-4">
+                            <strong>YSFlight Reforged</strong> takes the beloved, lightweight YSFlight simulator and enhances it for modern systems. We've preserved the simple, fun gameplay while overhauling the engine for better performance, visuals, and quality-of-life features.
                         </p>
+                        <div class="box has-background-light">
+                           <p><strong>A note on the name:</strong> This project was originally started as 'CirnoYSF'. You may still see this name in filenames or version info. It's the same project, now reforged for a wider audience!</p>
+                        </div>
                     </div>
-                    <div class="column is-one-third">
+                    <div class="column is-5 is-offset-1 has-text-centered">
                         <figure class="image is-16by9">
-                            <img
-                                class="screenshot-img"
-                                src="asset/ss2.webp"
-                                alt="F-14 flying in sunset while its raining"
-                            />
-                        </figure>
-                        <p class="has-text-centered mt-2 is-size-7">
-                            <em>Enjoy flying in beautiful environment!</em>
-                        </p>
-                    </div>
-                    <div class="column is-one-third">
-                        <figure class="image is-16by9">
-                            <img
+                             <img
                                 class="screenshot-img"
                                 src="asset/ss1.webp"
                                 alt="Eurofighter Typhoon parked with background of mountains and its raining"
                             />
                         </figure>
-                        <p class="has-text-centered mt-2 is-size-7">
-                            <em>Beautiful rain visuals.</em>
-                        </p>
                     </div>
                 </div>
             </div>
         </section>
-        <!-- Screenshot Section End -->
 
+        <!-- FEATURES SECTION -->
         <section class="section has-background-light">
+            <div class="container">
+                <h2 class="title is-3 has-text-centered">Key Upgrades</h2>
+                <div class="columns is-multiline mt-5">
+                    <div class="column is-one-third has-text-centered">
+                        <span class="icon-box"><i class="fas fa-tachometer-alt"></i></span>
+                        <h3 class="title is-5">High-Performance Rendering</h3>
+                        <p>Experience ultra-smooth flight with high, stable FPS. Our optimizations make the sim feel incredibly responsive.</p>
+                    </div>
+                    <div class="column is-one-third has-text-centered">
+                        <span class="icon-box"><i class="fas fa-drafting-compass"></i></span>
+                        <h3 class="title is-5">Enhanced Visuals</h3>
+                        <p>Fly through dynamic weather like rain and witness beautiful sunsets, bringing the world of YSFlight to life.</p>
+                    </div>
+                    <div class="column is-one-third has-text-centered">
+                        <span class="icon-box"><i class="fas fa-wrench"></i></span>
+                        <h3 class="title is-5">Simplified Setup</h3>
+                        <p>Get in the air faster. The built-in Auto Addon Installer and smarter defaults mean less configuration and more flying.</p>
+                    </div>
+                    <div class="column is-one-third has-text-centered">
+                        <span class="icon-box"><i class="fas fa-code-branch"></i></span>
+                        <h3 class="title is-5">Actively Developed</h3>
+                        <p>We're passionate pilots and developers. Expect regular updates, bug fixes, and features requested by the community.</p>
+                    </div>
+                    <div class="column is-one-third has-text-centered">
+                        <span class="icon-box"><i class="fas fa-layer-group"></i></span>
+                        <h3 class="title is-5">Vast Mod Support</h3>
+                        <p>Enjoy two decades of community-made aircraft, maps, and missions, all made easier to install and manage.</p>
+                    </div>
+                    <div class="column is-one-third has-text-centered">
+                        <span class="icon-box"><i class="fas fa-book-open"></i></span>
+                        <h3 class="title is-5">Open & Free Forever</h3>
+                        <p>Licensed under BSD 3-Clause. No hidden costs. The code is open for anyone to inspect, learn from, and contribute to.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- SCREENSHOT SECTION -->
+        <section class="section">
+            <div class="container">
+                <h2 class="title is-3 has-text-centered">📸 See the Overhaul in Action</h2>
+                <div class="columns is-multiline is-centered">
+                    <div class="column is-one-third">
+                        <figure class="image is-16by9">
+                            <img class="screenshot-img" src="asset/ss3.webp" alt="Lufthansa Boeing 747 in sunset while its raining"/>
+                        </figure>
+                        <p class="has-text-centered mt-2 is-size-7"><em>The new lighting engine creates breathtaking sunset and sunrise flights.</em></p>
+                    </div>
+                    <div class="column is-one-third">
+                        <figure class="image is-16by9">
+                            <img class="screenshot-img" src="asset/ss2.webp" alt="F-14 flying in sunset while its raining"/>
+                        </figure>
+                        <p class="has-text-centered mt-2 is-size-7"><em>Push your aircraft to the limits in a more vibrant and dynamic environment.</em></p>
+                    </div>
+                    <div class="column is-one-third">
+                        <figure class="image is-16by9">
+                            <img class="screenshot-img" src="asset/ss1.webp" alt="Eurofighter Typhoon parked with background of mountains and its raining"/>
+                        </figure>
+                        <p class="has-text-centered mt-2 is-size-7"><em>Custom rain effects add a new layer of immersion to your missions.</em></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- JOIN THE COMMUNITY SECTION -->
+        <section class="section" style="background-color: var(--reforged-charcoal);">
             <div class="container has-text-centered">
-                <h2 class="title is-4">🧊 Why CirnoYSF?</h2>
-                <p class="mb-4">
-                    Because ⑨ knows how to fly better! Faster updates, smoother experience, and
-                    features that make sense in 2025.
+                <h2 class="title is-3 has-text-white">Join the Workshop</h2>
+                <p class="is-size-5 mb-4 has-text-light">
+                    Have questions, feedback, or want to find people to fly with?<br/>
+                    Our community on Discord is the best place to be.
                 </p>
-                <p class="is-italic">
-                    "It’s still YSFlight at heart — just better, faster and cooler!"
-                </p>
+                <a href="https://discord.gg/qEYbuWu5NE" class="button is-primary is-large">
+                    <span class="icon"><i class="fab fa-discord"></i></span>
+                    <span>Join our Discord Server</span>
+                </a>
             </div>
         </section>
 
         <footer class="footer">
             <div class="content has-text-centered">
                 <p>
-                    <strong>CirnoYSF</strong> by
+                    <strong>YSFlight Reforged</strong> by
                     <a href="https://theindiandev.in">Ritabrata Das</a>. Licensed under
-                    <a href="https://opensource.org/licenses/BSD-3-Clause" target="_blank"
-                        >BSD 3-Clause License</a
-                    >.<br />
-                    Fork of the original YSFlight by Soji.
+                    <a href="https://opensource.org/licenses/BSD-3-Clause" target="_blank">BSD 3-Clause License</a>.
+                    <br />Originally known as CirnoYSF. A proud fork of YSFlight by Soji Yamakawa.
+                </p>
+                <p>
+                    <a href="https://github.com/the-indian-dev/cirnoYSF/">View on GitHub</a>
                 </p>
             </div>
         </footer>
